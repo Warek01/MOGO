@@ -5,7 +5,6 @@
    //    offset = elemRect.top - bodyRect.top;
    //    console.log(offset);
 
-   window.addEventListener('scroll', e => {})
    window.addEventListener('scroll', count);
 
    function count() {
@@ -21,24 +20,26 @@
 
             setTimeout(() => {
 
+               console.log(fact, limit)
+
                if (limit > 50) {
-                  // let interval = setTimeout(function interval() {
-                  //    fact.textContent = ++i;
-                  //    if (i !== limit)
-                  //       setTimeout(interval, 35);
-                  // }, 35);
-               } else if (limit === 41) {
                   let interval = setInterval(() => {
                      fact.textContent = i;
                      i++;
-                     if (i == limit) clearInterval(interval);
-                  }, 100);
+                     if (i - 1 == limit) clearInterval(interval);
+                  }, 18);
+               } else if (limit == 42) {
+                  let interval = setInterval(() => {
+                     fact.textContent = i;
+                     i++;
+                     if (i - 1 == limit) clearInterval(interval);
+                  }, 75);
                } else {
                   let interval = setInterval(() => {
                      fact.textContent = i;
                      i++;
-                     if (i == limit) clearInterval(interval);
-                  }, 125);
+                     if (i - 1 == limit) clearInterval(interval);
+                  }, 100);
                }
             }, 750);
 
@@ -71,5 +72,22 @@ $(".about-job .header").click(function (e) {
 
 
 ! function slider() {
+
+   let comments = $(".comment-section-wrapper ul.comments"), // comments slider
+      offset = 0;
+
+   $(".comment-section-wrapper img.arrow-right").click(function(e) {
+      if (offset > -1140 * 4) {
+         offset -= 1140;
+         comments.css("left", offset);
+      }
+   });
+
+   $(".comment-section-wrapper img.arrow-left").click(function(e) {
+      if (offset < 0 && offset != 1140 * 4) {
+         offset += 1140;
+         comments.css("left", offset);
+      }
+   });
 
 }();

@@ -1,0 +1,51 @@
+$text-yellow: #fce38a;
+$bg-col: #ffffff;
+$font-color: #333333;
+
+@mixin link {
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    text-transform: uppercase; 
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: $text-yellow;
+    }
+}
+
+@mixin separate-line {
+    display: block;
+    position: relative;
+    margin: 40px auto 0 auto;
+    height: 3px;
+    width: 60px;
+    background-color: #f38181;
+    z-index: 5;
+}
+
+@mixin logo-bold {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    height: 61px;
+}
+
+@mixin logo-cursive {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 95px;
+    font: 24px / 1.2 'Kaushan Script', cursive;
+}

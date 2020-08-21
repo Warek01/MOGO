@@ -1,0 +1,10 @@
+{
+   "prettier": {
+      "tabWidth": 3,
+      "bracketSpacing": true,
+      "useTabs": false
+   },
+   "dependencies": {
+      "jquery": "^3.5.1"
+   }
+}

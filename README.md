@@ -2,4 +2,4 @@
 
 ## Created from Psd template
 
-### Created by Warek (Alex)
+### by Warek (Alex)

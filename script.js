@@ -1,4 +1,8 @@
-// Vanilla facts, jQuery open menu, slider
+// Vanilla: facts
+// jQuery: open menu, comments slider
+//
+//
+
 ! function facts() {  
 
    // let bodyRect = document.body.getBoundingClientRect(),

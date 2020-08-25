@@ -76,7 +76,7 @@ let isDropdownBlocked = false;
 
          setTimeout(() => {
             isDropdownBlocked = false; // Unlock dropdown
-         }, 300);
+         }, 325);
       }
    });
 }();

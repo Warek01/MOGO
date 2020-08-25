@@ -62,7 +62,7 @@ let isDropdownBlocked = false;
          if ($(this).parent().css("height") === "60px") { // If focused cell is compressed
             $(".about-job .cell").get().forEach(elem => { // Iterate cells to compress/expand
 
-               if ($(elem).css("height") === "240px") { // If cell is expanded
+               if (parseInt($(elem).css("height")) > 60) { // If cell is expanded
                   $(elem).css("height", "60px")
                      .find(".arrow").css("transform", "rotate(180deg)")
                      .end()
@@ -76,7 +76,7 @@ let isDropdownBlocked = false;
 
          setTimeout(() => {
             isDropdownBlocked = false; // Unlock dropdown
-         }, 325);
+         }, 200);
       }
    });
 }();

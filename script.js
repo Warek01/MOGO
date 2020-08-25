@@ -93,12 +93,13 @@ let isDropdownBlocked = false;
          offset -= 1140;
          comments.css("left", offset);
          
-      } else if (offset === -1440 * 3) {
+      } else if (offset === -1140 * 4) {
 
          offset = 0;
          comments.css("left", offset);
          
       }
+      console.log(offset)
    });
 
    $(".comment-section-wrapper img.arrow-left").click(function (e) {

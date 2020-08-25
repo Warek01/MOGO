@@ -99,7 +99,6 @@ let isDropdownBlocked = false;
          comments.css("left", offset);
          
       }
-      console.log(offset)
    });
 
    $(".comment-section-wrapper img.arrow-left").click(function (e) {

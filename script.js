@@ -1,10 +1,10 @@
 "use strict";
 !function facts() {
 
-   window.addEventListener('scroll', count);
+   window.addEventListener("scroll", count);
 
    function count() {
-      let facts = document.querySelectorAll('.facts .fact p.h');
+      let facts = document.querySelectorAll(".facts .fact p.h");
 
       if (document.documentElement.scrollTop >= 865 && document.documentElement.scrollTop <= 1560) {
          for (let fact of facts) {
@@ -22,26 +22,26 @@
                   let interval = setInterval(() => {
                      fact.textContent = i;
                      i++;
-                     if (i - 1 == limit) clearInterval(interval);
+                     if (i - 1 === limit) clearInterval(interval);
                   }, 18);
-               } else if (limit == 42) {
+               } else if (limit === 42) {
                   let interval = setInterval(() => {
                      fact.textContent = i;
                      i++;
-                     if (i - 1 == limit) clearInterval(interval);
+                     if (i - 1 === limit) clearInterval(interval);
                   }, 75);
                } else {
                   let interval = setInterval(() => {
                      fact.textContent = i;
                      i++;
-                     if (i - 1 == limit) clearInterval(interval);
+                     if (i - 1 === limit) clearInterval(interval);
                   }, 100);
                }
             }, 750);
 
          }
 
-         window.removeEventListener('scroll', count);
+         window.removeEventListener("scroll", count);
       }
    }
 
@@ -106,7 +106,7 @@ let isDropdownBlocked = false;
 
          offset += 1140;
          comments.css("left", offset);
-         console.log(offset)
+         console.log(offset);
 
       } else if (offset >= 0) {
 

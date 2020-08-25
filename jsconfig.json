@@ -2,7 +2,9 @@
    "typeAcquisition": {
       "include": [
          "jquery",
-         "node"
+         "node",
+         "express",
+         "chalk"
       ]
    }
 }

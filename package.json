@@ -5,6 +5,7 @@
       "useTabs": false
    },
    "dependencies": {
+      "chalk": "^4.1.0",
       "express": "^4.17.1",
       "jquery": "^3.5.1"
    }

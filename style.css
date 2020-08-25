@@ -734,5 +734,17 @@ header .container .bottom-links .index {
   height: 1050px;
   width: 1200px;
 }
+.team p.text {
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Roboto';
+  color: #b3b3b3;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: italic;
+}
 
 /* .team */

@@ -28,13 +28,13 @@
                      fact.textContent = i;
                      if (i === limit) clearInterval(interval);
                      i++;
-                  }, 75);
+                  }, 55);
                } else {
                   let interval = setInterval(() => {
                      fact.textContent = i;
                      if (i === limit) clearInterval(interval);
                      i++;
-                  }, 100);
+                  }, 80);
                }
             }, 750);
 

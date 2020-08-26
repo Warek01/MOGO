@@ -39,6 +39,11 @@ $font-color: #333333;
     text-align: center;
     text-transform: uppercase;
     height: 61px;
+
+    @media screen and (min-width: 1599px) and (min-height: 899px) {
+        font-size: 36px;
+    }
+
 }
 
 @mixin logo-cursive {
@@ -48,4 +53,9 @@ $font-color: #333333;
     align-items: flex-end;
     height: 95px;
     font: 24px / 1.2 'Kaushan Script', cursive;
+
+    @media screen and (min-width: 1599px) and (min-height: 899px) {
+        font-size: 32px;
+    }
+
 }

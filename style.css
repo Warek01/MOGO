@@ -125,6 +125,11 @@ img::-moz-selection {
   text-transform: uppercase;
   height: 61px;
 }
+@media screen and (min-width: 1599px) and (min-height: 899px) {
+  .logo-bold {
+    font-size: 36px;
+  }
+}
 
 .logo-cursive {
   position: relative;
@@ -133,6 +138,11 @@ img::-moz-selection {
   align-items: flex-end;
   height: 95px;
   font: 24px / 1.2 'Kaushan Script', cursive;
+}
+@media screen and (min-width: 1599px) and (min-height: 899px) {
+  .logo-cursive {
+    font-size: 32px;
+  }
 }
 
 .main-container {
@@ -248,6 +258,11 @@ header .container .links .logo {
   text-align: left;
   user-select: none;
 }
+@media screen and (min-width: 1599px) and (min-height: 899px) {
+  header .container .links .logo {
+    font-size: 28px;
+  }
+}
 header .container .logo-container {
   width: 100%;
   margin-top: 200px;
@@ -262,6 +277,16 @@ header .container .logo-container .logo2 {
   font-size: 106px;
   font-weight: bold;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1439px) and (max-height: 900px) {
+  header .container .logo-container {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1599px) and (max-height: 900px) {
+  header .container .logo-container {
+    margin-top: 150px;
+  }
 }
 header .container .learn-more {
   border: 2px solid white;
@@ -307,12 +332,13 @@ header .container .bottom-links a {
   justify-content: center;
   align-items: center;
   text-indent: 6px;
+  transition: all .2s ease;
 }
 header .container .bottom-links a:hover {
   color: #fce38a;
 }
 header .container .bottom-links a:hover {
-  color: #e7b606;
+  color: #cea205;
 }
 header .container .bottom-links .index {
   font-size: 18px;

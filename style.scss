@@ -267,6 +267,11 @@ header {
                 border-color: darken($text-yellow, 40);
                 color: darken($text-yellow, 40);
             }
+
+            @media screen and (min-width: 1439px) {
+                
+            }
+
         } // learn more
 
         .bottom-links {
@@ -754,10 +759,6 @@ header {
         position: relative;
         cursor: pointer;
         user-select: none;
-
-        &.arrow-left {
-
-        }
 
         &.arrow-right {
             transform: rotate(180deg);

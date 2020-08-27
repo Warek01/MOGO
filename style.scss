@@ -367,26 +367,65 @@ header {
     .images {
         width: 100%;
 
-        img {
-            display: block;
+        div.img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
             float: left;
+            left: 0;
+            top: 0;
             height: 250px;
             width: 380px;
             margin-left: 30px;
             margin-top: 105px;
-
             transition: all .15s ease;
+
+            span {
+                font-family: "Montserrat";
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #fff;
+                font-size: 18px;
+                filter: opacity(0);
+                transition: all .2s ease;
+            }
             
             &:hover {
                 left: -10px;
                 top: -10px;
                 box-shadow: 10px 10px 0 #95e1d3;
                 cursor: pointer;
+
+                span { filter: opacity(1); }
             }
 
             &:first-child {
                 margin-left: 0;
+                background-image: url(./img/about-img1.jpg);
+
+                &:hover {
+                    background-image: -webkit-linear-gradient(180deg, #ee8989cc, #f0d989cc), url(./img/about-img1.jpg);
+                    background-image: linear-gradient(180deg, #ee8989cc, #f0d989cc), url(./img/about-img1.jpg);
+                }
+            }
+
+            &:nth-child(2) {
+                background-image: url(./img/about-img2.jpg);
+
+                &:hover {
+                    background-image: -webkit-linear-gradient(180deg, #ee8989cc, #f0d989cc), url(./img/about-img2.jpg);
+                    background-image: linear-gradient(180deg, #ee8989cc, #f0d989cc), url(./img/about-img2.jpg);
+                }
+            }
+
+            &:nth-child(3) {
+                background-image: url(./img/about-img3.jpg);
+
+                &:hover {
+                    background-image: -webkit-linear-gradient(180deg, #ee8989cc, #f0d989cc), url(./img/about-img3.jpg);
+                    background-image: linear-gradient(180deg, #ee8989cc, #f0d989cc), url(./img/about-img3.jpg);
+                }
             }
         } // img
     } // images
@@ -794,5 +833,106 @@ header {
         font-size: 15px;
         line-height: 25px;
         font-style: italic;
+    }
+
+    .team-images {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 470px;
+        margin-top: 90px;
+        justify-content: space-between;
+
+        .member {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 380px;
+            height: 470px;
+            transition: all .2s ease;
+            left: 0;
+            top: 0;
+
+            &:first-child {
+                background-image: url(img/team-1.png);
+                &:hover {
+                    background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/team-1.png);
+                }
+            }
+
+            &:nth-child(2) {
+                background-image: url(img/team-2.png);
+                &:hover {
+                    background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/team-2.png);
+                }
+            }
+
+            &:last-child {
+                background-image: url(img/team-3.png);
+                &:hover {
+                    background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/team-3.png);
+                }
+            }
+
+            &:hover {
+                left: -10px;
+                top: -10px;
+                box-shadow: 10px 10px 0px #95e1d3;
+
+                .links { filter: opacity(1); }
+            }
+
+            .links {
+                width: 227px;
+                height: 56px;
+                filter: opacity(0);
+                transition: all .25s ease;
+                
+                button {
+                    float: left;
+                    width: 56px;
+                    height: 56px;
+                    background-color: #fce38a;
+                    border: none;
+                    cursor: pointer;
+                    transition: all .35s ease;
+
+                    &:hover {
+                        background-color: #f38181;
+                        
+                        img { filter: brightness(100); }
+                    }
+                }
+            } /* .links */
+        } /* .member */
+    } /* .team-images */
+
+    .team-names {
+        width: 1200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        margin-top: 30px;
+
+        .name { 
+            text-align: center;
+            font: inherit;
+            width: 33.333%;
+        }
+
+        .profession {
+            margin-top: -25px;
+            text-align: center;
+            width: 33.333%;
+            font-family: "Roboto";
+            font-style: italic;
+            font-weight: 300;
+            color: $text-light;
+        }
     }
 } /* .team */

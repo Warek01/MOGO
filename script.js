@@ -21,7 +21,6 @@
                      fact.textContent = i;
                      if (i === limit) clearInterval(interval);
                      i++;
-                     console.log(i, limit, limit === i)
                   }, 18);
                } else if (limit === 42) {
                   let interval = setInterval(() => {
@@ -106,7 +105,6 @@ let isDropdownBlocked = false;
 
          offset += 1140;
          comments.css("left", offset);
-         console.log(offset);
 
       } else if (offset >= 0) {
 

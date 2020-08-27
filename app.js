@@ -7,6 +7,26 @@ const express = require("express"),
 
 app.use(log, express.static(__dirname));
 
+app.route("/connections").get((req, res, next) => {
+   try {
+      console.log(req.query);
+      switch(req.query.ipname) {
+         case "my":
+            res.end(req.ip || req.connection.remoteAddress);
+            break;
+
+         default:
+            res.sendFile(__dirname + "/administration/connections.html");
+            res.end();
+            break;
+      }
+
+   } catch (err) {
+      res.end(err.name + "\n" + err.message);
+   }
+   next();
+});
+
 app.listen(5554);
 
 function log(req, res, next) {
@@ -15,7 +35,7 @@ function log(req, res, next) {
       console.log(
          chalk.greenBright("---------------------------------------------------------------------------\n") +
          chalk.hex("#ff6b81").bold("New connection from") + " " +
-         chalk.yellow.italic.underline((req.headers['x-forwarded-for'] || req.connection.remoteAddress).match(/([\d\.]+)/)[0]) + ":" +
+         chalk.yellow.italic.underline((req.connection.remoteAddress || req.ip).match(/([\d\.]+)/)[0]) + ":" +
          chalk.redBright(req.connection.remotePort) + " " +
          chalk.bgWhite.black(req.connection.remoteFamily) +
          "\non " +

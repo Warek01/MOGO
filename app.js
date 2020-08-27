@@ -18,8 +18,9 @@ function log(req, res, next) {
          chalk.yellow.italic.underline((req.headers['x-forwarded-for'] || req.connection.remoteAddress).match(/([\d\.]+)/)[0]) + ":" +
          chalk.redBright(req.connection.remotePort) + " " +
          chalk.bgWhite.black(req.connection.remoteFamily) +
-         "\non " + 
-         chalk.hex("#34ace0")(`${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`)
+         "\non " +
+         chalk.hex("#34ace0")(`${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`) + " " +
+         chalk.hex("#3742fa")(`${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`)  
       );
    }
 

@@ -59,3 +59,12 @@ $font-color: #333333;
     }
 
 }
+
+@mixin roboto-lightItalic {
+    font-weight: 300;
+    font-family: "Roboto";
+    color: #b3b3b3;
+    font-size: 15px;
+    line-height: 25px;
+    font-style: italic;
+}

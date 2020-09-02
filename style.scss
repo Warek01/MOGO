@@ -676,13 +676,11 @@ header {
                 }
             
                 p.text {
+                    @include roboto-lightItalic;
                     position: relative;
                     height: 80px;
                     width: 530px;
                     margin-left: 20px;
-                    font-family: $roboto;
-                    line-height: 24px;
-                    color: $text-light;
                     overflow-y: show;
 
                     &::selection {
@@ -709,7 +707,6 @@ header {
     } /* .cell */
 } /* .about-job */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 .comment-section-wrapper {
     display: flex;
     width: 100%;
@@ -813,16 +810,12 @@ header {
     width: 1200px;
 
     p.text {
+        @include roboto-lightItalic;
         width: 950px;
         margin: 0 auto;
         margin-top: 50px;
         text-align: center;
-        font-weight: normal;
-        font-family: 'Roboto';
-        color: $text-light;
-        font-size: 15px;
         line-height: 25px;
-        font-style: italic;
     }
 
     .team-images {
@@ -948,16 +941,11 @@ header {
     height: 410px;
 
     p.text {
+        @include roboto-lightItalic;
         width: 950px;
         margin: 0 auto;
         margin-top: 50px;
         text-align: center;
-        font-weight: normal;
-        font-family: 'Roboto';
-        color: $text-light;
-        font-size: 15px;
-        line-height: 25px;
-        font-style: italic;
     }
 } /* .work-example */
 
@@ -977,12 +965,15 @@ header {
         height: 390px;
         justify-content: center;
         align-items: center;
+        
+        &:hover .container { filter: opacity(1); }
 
         .container {
             position: relative;
             width: 200px;
             height: 130px;
             filter: opacity(0);
+            cursor: default;
             transition: all .2s ease;
 
             img {
@@ -1006,17 +997,15 @@ header {
                 font-style: italic;
                 font-size: 15px;
             }
-        }
+        } /* .container */
 
-        &:hover .container {
-            filter: opacity(1);
-        }
 
         &:nth-child(1) {
             background-image: url(./img/photo-1.png);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-1.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), 
+                url(img/photo-1.png);
                 
             }
         }
@@ -1024,7 +1013,8 @@ header {
             background-image: url(./img/photo-2.png);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-2.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc),
+                 url(img/photo-2.png);
             }
         }
         &:nth-child(3) {
@@ -1035,35 +1025,40 @@ header {
             height: (390px * 2);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-3.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), 
+                url(img/photo-3.png);
             }
         }
         &:nth-child(4) {
             background-image: url(./img/photo-4.png);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-4.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), 
+                url(img/photo-4.png);
             }
         }
         &:nth-child(5) {
             background-image: url(./img/photo-5.png);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-5.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), 
+                url(img/photo-5.png);
             }
         }
         &:nth-child(6) {
             background-image: url(./img/photo-6.png);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-6.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), 
+                url(img/photo-6.png);
             }
         }
         &:nth-child(7) {
             background-image: url(./img/photo-7.png);
 
             &:hover {
-                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc), url(img/photo-7.png);
+                background-image: -webkit-linear-gradient(-90deg, #ee8989cc, #f0d989cc),
+                url(img/photo-7.png);
             }
         }
     } /* .img */
@@ -1088,10 +1083,7 @@ header {
             border: none;
         }
 
-        p {
-            color: $text-light;
-        }
-
+        p { color: $text-light; }
         p.author {
             position: relative;
             top: -75px;
@@ -1163,10 +1155,7 @@ header {
                     top: -50px;
                     left: 130px;
                     width: 390px;
-                    font-family: "Roboto";
-                    font-size: 15px;
-                    font-weight: 400;
-                    color: $text-light;
+                    @include roboto-lightItalic;
                 }
 
                 .line {
@@ -1189,13 +1178,8 @@ header {
     width: 100%;
     height: 770px;
 
-    .logo-cursive {
-        margin-top: 25px;
-    }
-
-    .logo-bold {
-        margin-top: -15px;
-    }
+    .logo-cursive { margin-top: 25px; }
+    .logo-bold { margin-top: -15px; }
 
     .wrap {
         width: 100%;
@@ -1216,9 +1200,7 @@ header {
                 &:hover{
                     outline: 2px solid #95e1d3;
 
-                    .date {
-                        background-color: #f38181;
-                    }
+                    .date { background-color: #f38181; }
                 }
             }
 
@@ -1302,6 +1284,10 @@ header {
                     img {
                     position: relative;
                     display: inline-block;
+                    cursor: pointer;
+                    transition: all .15s ease;
+
+                    &:hover { filter: brightness(85%); }
                 }
 
                 span {
@@ -1310,11 +1296,9 @@ header {
                     font-weight: 300;
                     font-style: italic;
                     color: $text-light;
-                    cursor: default;
+                    cursor: pointer;
                 }
             }
-
-            
         } /* .stats */
     } /* .wrap */
 } /* .blogs */
@@ -1487,10 +1471,9 @@ header {
 footer {
     height: 60px;
     width: 100%;
-    border-top: 1px solid #e5e5e5;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    border-top: 1px solid #e5e5e5;
 
     p {
         font-size: 14px;

@@ -1,5 +1,4 @@
 /* Montserrat font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 @font-face {
   font-family: 'Montserrat';
   font-weight: normal;
@@ -665,13 +664,16 @@ header .container .bottom-links .index {
   border-radius: 3px;
 }
 .about-job .cell .info-text .scroll-container p.text {
+  font-weight: 300;
+  font-family: "Roboto";
+  color: #b3b3b3;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: italic;
   position: relative;
   height: 80px;
   width: 530px;
   margin-left: 20px;
-  font-family: "Roboto", sans-serif;
-  line-height: 24px;
-  color: #b3b3b3;
   overflow-y: show;
 }
 .about-job .cell .info-text .scroll-container p.text::selection {
@@ -785,16 +787,17 @@ header .container .bottom-links .index {
   /* .team-images */
 }
 .team p.text {
-  width: 950px;
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: center;
-  font-weight: normal;
-  font-family: 'Roboto';
+  font-weight: 300;
+  font-family: "Roboto";
   color: #b3b3b3;
   font-size: 15px;
   line-height: 25px;
   font-style: italic;
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 25px;
 }
 .team .team-images {
   position: relative;
@@ -912,16 +915,16 @@ header .container .bottom-links .index {
   height: 410px;
 }
 .work-example-text p.text {
-  width: 950px;
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: center;
-  font-weight: normal;
-  font-family: 'Roboto';
+  font-weight: 300;
+  font-family: "Roboto";
   color: #b3b3b3;
   font-size: 15px;
   line-height: 25px;
   font-style: italic;
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
 }
 
 /* .work-example */
@@ -942,12 +945,17 @@ header .container .bottom-links .index {
   height: 390px;
   justify-content: center;
   align-items: center;
+  /* .container */
+}
+.work-example-images .img:hover .container {
+  filter: opacity(1);
 }
 .work-example-images .img .container {
   position: relative;
   width: 200px;
   height: 130px;
   filter: opacity(0);
+  cursor: default;
   transition: all .2s ease;
 }
 .work-example-images .img .container img {
@@ -967,9 +975,6 @@ header .container .bottom-links .index {
   font-family: "Roboto";
   font-style: italic;
   font-size: 15px;
-}
-.work-example-images .img:hover .container {
-  filter: opacity(1);
 }
 .work-example-images .img:nth-child(1) {
   background-image: url(./img/photo-1.png);
@@ -1104,10 +1109,12 @@ header .container .bottom-links .index {
   top: -50px;
   left: 130px;
   width: 390px;
+  font-weight: 300;
   font-family: "Roboto";
-  font-size: 15px;
-  font-weight: 400;
   color: #b3b3b3;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: italic;
 }
 .clients-wrapper .clients .client-profiles .profile .line {
   position: relative;
@@ -1230,6 +1237,11 @@ header .container .bottom-links .index {
 .blogs .wrap .stats .stat img {
   position: relative;
   display: inline-block;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.blogs .wrap .stats .stat img:hover {
+  filter: brightness(85%);
 }
 .blogs .wrap .stats .stat span {
   font-family: "Roboto";
@@ -1237,7 +1249,7 @@ header .container .bottom-links .index {
   font-weight: 300;
   font-style: italic;
   color: #b3b3b3;
-  cursor: default;
+  cursor: pointer;
 }
 
 /* .blogs */
@@ -1273,9 +1285,8 @@ header .container .bottom-links .index {
 }
 .map .separate-line {
   margin-top: 20px;
-}
+}/* .map */
 
-/* .map */
 .pre-footer {
   position: relative;
   display: flex;
@@ -1390,10 +1401,9 @@ header .container .bottom-links .index {
 footer {
   height: 60px;
   width: 100%;
-  border-top: 1px solid #e5e5e5;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e5e5e5;
 }
 footer p {
   font-size: 14px;

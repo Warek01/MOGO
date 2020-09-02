@@ -80,7 +80,7 @@ let isDropdownBlocked = false;
 }();
 
 
-!function slider() {
+!function slider1() {
 
    let comments = $(".comment-section-wrapper ul.comments"); // comments slider
    let offset = -1140;
@@ -101,6 +101,42 @@ let isDropdownBlocked = false;
    });
 
    $(".comment-section-wrapper img.arrow-left").click(function (e) {
+      if (offset < 0 && offset < 1140 * 5) {
+
+         offset += 1140;
+         comments.css("left", offset);
+
+      } else if (offset >= 0) {
+
+         offset = -1140 * 4;
+         comments.css("left", offset);
+
+      }
+   });
+
+}();
+
+!function slider2() {
+
+   let comments = $(".comment-section-wrapper-2 ul.comments"); // comments slider
+   let offset = -1140;
+
+   // Slide width: 1140px
+   $(".comment-section-wrapper-2 img.arrow-right").click(function (e) {
+      if (offset > -1140 * 4) {
+
+         offset -= 1140;
+         comments.css("left", offset);
+
+      } else if (offset === -1140 * 4) {
+
+         offset = 0;
+         comments.css("left", offset);
+
+      }
+   });
+
+   $(".comment-section-wrapper-2 img.arrow-left").click(function (e) {
       if (offset < 0 && offset < 1140 * 4) {
 
          offset += 1140;
@@ -108,7 +144,7 @@ let isDropdownBlocked = false;
 
       } else if (offset >= 0) {
 
-         offset = -1140 * 3;
+         offset = -1140 * 4;
          comments.css("left", offset);
 
       }

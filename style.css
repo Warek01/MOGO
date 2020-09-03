@@ -1201,10 +1201,17 @@ header .container .bottom-links .index {
   display: flex;
   justify-content: space-between;
 }
-.blogs .wrap .titles span {
+.blogs .wrap .titles a {
+  display: inline-block;
   width: 380px;
+  color: #333;
+  text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
+  transition: all .15s ease;
+}
+.blogs .wrap .titles a:hover {
+  color: #95e1d3;
 }
 .blogs .wrap .texts {
   position: relative;
@@ -1405,6 +1412,7 @@ header .container .bottom-links .index {
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 14px;
+  cursor: default;
 }
 .pre-footer .container2 .title {
   position: relative;
@@ -1447,8 +1455,50 @@ header .container .bottom-links .index {
   width: 300px;
   height: 100%;
 }
+.pre-footer .container3 .logo {
+  position: relative;
+  margin-top: 76px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: default;
+}
+.pre-footer .container3 .photos {
+  position: relative;
+  display: grid;
+  width: 270px;
+  height: 270px;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  margin-top: 40px;
+}
+.pre-footer .container3 .photos img {
+  cursor: pointer;
+}
+.pre-footer .container3 .photos img:hover {
+  outline: 2px solid #95e1d3;
+}
+.pre-footer .container3 .more {
+  display: inline-block;
+  position: relative;
+  margin-top: 15px;
+  font-weight: 300;
+  font-family: "Roboto";
+  color: #b3b3b3;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all .15s ease;
+}
+.pre-footer .container3 .more:hover {
+  color: #95e1d3;
+}
 
+/* .pre-foto */
 footer {
+  display: flex;
   height: 60px;
   width: 100%;
   align-items: center;

@@ -1242,10 +1242,18 @@ header {
             display: flex;
             justify-content: space-between;
 
-            span {
+            a {
+                display: inline-block;
                 width: 380px;
+                color: #333;
+                text-decoration: none;
                 text-transform: uppercase;
                 font-size: 14px;
+                transition: all .15s ease;
+
+                &:hover {
+                    color: #95e1d3;
+                }
             }
 
             
@@ -1474,6 +1482,7 @@ header {
             font-family: "Montserrat";
             font-weight: bold;
             font-size: 14px;
+            cursor: default;
         }
 
         .title {
@@ -1520,10 +1529,50 @@ header {
         position: relative;
         width: 300px;
         height: 100%;
+
+        .logo {
+            position: relative;
+            margin-top: 76px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: default;
+        }
+
+        .photos {
+            position: relative;
+            display: grid;
+            width: 270px;
+            height: 270px;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+            margin-top: 40px;
+
+            img {
+                cursor: pointer;
+
+                &:hover { outline: 2px solid #95e1d3; }
+            }
+        }
+
+        .more {
+            display: inline-block;
+            position: relative;
+            margin-top: 15px;
+            @include roboto-lightItalic;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all .15s ease;
+
+            &:hover {
+                color: #95e1d3;
+            }
+        }
     }
-}
+} /* .pre-foto */
 
 footer {
+    display: flex;
     height: 60px;
     width: 100%;
     align-items: center;

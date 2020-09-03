@@ -1242,10 +1242,18 @@ header {
             display: flex;
             justify-content: space-between;
 
-            span {
+            a {
+                display: inline-block;
                 width: 380px;
+                color: #333;
+                text-decoration: none;
                 text-transform: uppercase;
                 font-size: 14px;
+                transition: all .15s ease;
+
+                &:hover {
+                    color: #95e1d3;
+                }
             }
 
             
@@ -1402,7 +1410,14 @@ header {
                 width: 230px;
                 justify-content: space-evenly;
 
-                img { cursor: pointer; }
+                img { 
+                    cursor: pointer;
+                    transition: filter .2s ease;
+                    
+                    &:hover {
+                        filter: brightness(50%);
+                    }
+                }
             }
         }
 
@@ -1457,18 +1472,107 @@ header {
 
     .container2 {
         position: relative;
-        width: 400px;
+        width: 360px;
         height: 100%;
-    }
+        margin: 0 20px 0 20px;
+
+        .logo {
+            margin-top: 76px;
+            text-transform: uppercase;
+            font-family: "Montserrat";
+            font-weight: bold;
+            font-size: 14px;
+            cursor: default;
+        }
+
+        .title {
+            position: relative;
+            width: 210px;
+            left: -18px;
+            top: 20px;
+            float: right;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: "Montserrat";
+            font-size: 12px;
+            transition: color .15s ease;
+        }
+
+        .date {
+            position: relative;
+            left: 135px;
+            top: -35px;
+            @include roboto-lightItalic;
+            font-size: 13px;
+        }
+
+        .blog1 {
+            margin-top: 40px;
+        }
+
+        .blog1, .blog2, .blog3 {
+            cursor: pointer;
+
+            &:hover {
+                img {
+                    outline: 2px solid #95e1d3;
+                }
+
+                .title {
+                    color: #95e1d3;
+                }
+            }
+        }
+    } /* .container2 */
 
     .container3 {
         position: relative;
         width: 300px;
         height: 100%;
+
+        .logo {
+            position: relative;
+            margin-top: 76px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: default;
+        }
+
+        .photos {
+            position: relative;
+            display: grid;
+            width: 270px;
+            height: 270px;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+            margin-top: 40px;
+
+            img {
+                cursor: pointer;
+
+                &:hover { outline: 2px solid #95e1d3; }
+            }
+        }
+
+        .more {
+            display: inline-block;
+            position: relative;
+            margin-top: 15px;
+            @include roboto-lightItalic;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all .15s ease;
+
+            &:hover {
+                color: #95e1d3;
+            }
+        }
     }
-}
+} /* .pre-foto */
 
 footer {
+    display: flex;
     height: 60px;
     width: 100%;
     align-items: center;
